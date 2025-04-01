@@ -1,0 +1,21 @@
+{
+    "name": "vkovalov/traffband",
+    "description": "This is TraffBand Developer's Clean Theme",
+    "type": "project",
+    "license": "ISC",
+    "autoload": {
+        "psr-4": {
+            "Vkovalov\\Traffband\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TraffBand Development Team"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "mobiledetect/mobiledetectlib": "^4.8",
+        "firebase/php-jwt": "^6.10"
+    }
+}

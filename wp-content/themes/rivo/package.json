@@ -1,0 +1,22 @@
+{
+  "name": "rivo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "postcss-preset-env": "^10.1.5",
+    "rollup-plugin-critical": "^1.0.15",
+    "vite": "^6.2.4",
+    "vite-plugin-imagemin": "^0.6.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "sass": "^1.86.1"
+  },
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "preview": "vite preview"
+  }
+}
