@@ -44,4 +44,5 @@ wp-content/debug.log
 # Allow theme-specific files
 !wp-content/themes/rivo**
 wp-content/themes/rivo/node_modules
-wp-content/themes/rivo/dist/
+wp-content/themes/rivo/dist**
+!wp-content/themes/rivo/dist/vendor**
