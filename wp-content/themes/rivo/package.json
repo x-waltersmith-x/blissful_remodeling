@@ -11,12 +11,13 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "chokidar-cli": "^3.0.0",
     "postcss": "^8.5.3",
     "sass": "^1.86.1"
   },
   "scripts": {
     "build": "vite build",
-    "watch": "vite build --watch",
+    "watch": "chokidar \"src/**/*.{js,scss}\" -c \"vite build\"",
     "preview": "vite preview"
   }
 }

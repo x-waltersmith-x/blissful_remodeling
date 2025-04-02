@@ -1,0 +1,31 @@
+@use "utilities/variables";
+@use "utilities/mixins" as *;
+
+.gallery{
+    .item {
+        * {
+            max-width: 100%;
+        }
+    }
+    &-block {
+        padding: 46px 0;
+
+        @include media-query(ipadPro) {
+            padding: 64px 0;
+        }
+        .description {
+            max-width: 870px;
+            margin: 46px auto 0;
+
+            @include media-query(ipadPro) {
+                margin-top: 64px;
+            }
+
+            p {
+                &:not(:last-of-type) {
+                    margin: 0 0 20px;
+                }
+            }
+        }
+    }
+}

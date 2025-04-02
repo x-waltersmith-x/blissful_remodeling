@@ -1,11 +1,11 @@
 <?php 
 /**
  * Service Areas Block Template.
- * 
  */
+$blockname = pathinfo(__FILE__, PATHINFO_FILENAME);
+$id = $blockname. '-' . $block['id'];
+$classes = !empty($block['className']) ? $blockname.'-block ' . $block['className'] : $blockname.'-block';
 
-$id = 'areas-' . $block['id'];
-$classes = !empty($block['className']) ? 'areas ' . $block['className'] : 'areas';
    
 ?>
 <div id="<?php echo esc_attr($id);?>" class="<?php echo esc_attr($classes); ?>">

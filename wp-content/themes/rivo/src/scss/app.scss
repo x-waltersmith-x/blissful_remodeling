@@ -1,3 +1,7 @@
-body {
-    overflow-x: hidden;
-} 
+@use "parts/normalize";
+@use "utilities/variables";
+@use "utilities/mixins" as *;
+@use "parts/buttons";
+@use "parts/header";
+@use "parts/general";
+@use "parts/footer"; 

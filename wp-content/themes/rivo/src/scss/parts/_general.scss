@@ -1,0 +1,105 @@
+@use "../utilities/variables";
+@use "../utilities/mixins" as *;
+
+body {
+    overflow-x: hidden;
+    font-family: variables.$textFont;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: variables.$headFont;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+
+    @include media-query(fullHD) {
+       max-width: variables.$fullHD;
+    }
+}
+
+.container {
+    padding: 0 variables.$containerPadding;
+
+    @include media-query(desktop) {
+        padding: 0 calc(variables.$containerPadding * 2);
+    }
+
+    @include media-query(largeDesktop) {
+        padding: 0 calc(variables.$containerPadding * 3);
+    }
+
+    @include media-query(dvi) {
+        padding: 0 calc(variables.$containerPadding * 4);
+    }
+
+    @include media-query(fullHD) {
+        padding: 0 calc(variables.$containerPadding * 5);
+    }
+}
+
+.main {
+    padding-top: 83px;
+}
+
+.page-header {
+    padding: 128px 0;
+    text-align: center;
+
+    &.dark {
+        color: variables.$white;
+        background: variables.$black url("../media/Image.png") no-repeat center center / cover;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    .container {
+        display: grid;
+        gap: 24px;
+    }
+
+    .breadcrumbs  {
+        width: max-content;
+        margin: auto;
+        ol {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            text-transform: uppercase;
+            li {
+                display: flex;
+                align-items: center;
+                span {
+                    color: variables.$grey;
+                }
+                a {
+                    span {
+                        color: variables.$white;
+                    }
+                }
+            }
+        }
+        .separator {
+            margin: 0 5px;
+        }
+    }
+
+    h1 {
+        font-size: 42px;
+        font-weight: 100;
+        @include media-query(ipadMini) {
+            font-size: 48px;
+        }
+    }
+
+    .description {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+

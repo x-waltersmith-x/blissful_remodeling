@@ -1,0 +1,101 @@
+@use "../utilities/variables";
+@use "../utilities/mixins" as *;
+
+.header {
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &.home {
+        padding: 24px 0;
+    }
+
+    &.general {
+        width: 100vw;
+        padding: 20px 0;
+        background: variables.$grey;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        @include media-query(ipadPro) {
+            padding: 16px 0;
+        }
+    }
+    .site-url {
+        line-height: 1;
+        img {
+            max-width: 270px;
+        }
+    }
+    .navigation {
+        ul {
+            padding: 0;
+            margin: 0;
+            @include media-query(ipadPro) {
+                display: flex;
+                gap: 30px;
+            }
+            li {
+                list-style-type: none;
+                a {
+                    text-decoration: none;
+                    color: variables.$black;
+                }
+            }
+        }
+
+        &-mobile {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: variables.$grey;
+            height: calc(100vh - 95.59px);
+            padding: 32px 15px;
+            overflow: hidden;
+            display: grid;
+            gap: 32px;
+            &:not(.open) {
+                display: none;
+            }
+            @include media-query(ipadPro) {
+                display: none;
+            }
+        }
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        border: unset;
+        @include media-query(ipadPro) {
+            display: none;
+        }
+        &:not(.open) {
+            .close {
+                display: none;
+            }
+        }
+        &.open {
+            .open {
+                display: none;
+            }
+        }
+    }
+}
+
+.admin-bar {
+    .header {
+       top: 46px;
+
+        @include media-query(ipadPro) {
+            top: 32px;
+        }
+    }
+}
